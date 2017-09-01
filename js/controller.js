@@ -11,6 +11,7 @@ var PenguinController = function PenguinController(penguinView, penguinModel) {
 
 
 PenguinController.prototype.initialize = function initialize() {
+  // another contract from PenguinView
   this.penguinView.onClickGetPenguin = this.onClickGetPenguin.bind(this);
 };
 
@@ -25,27 +26,27 @@ PenguinController.prototype.onClickGetPenguin = function onClickGetPenguin(e) {
 
 
 PenguinController.prototype.showPenguin = function showPenguin(penguinModelData) {
+
+  // Why isn't this somehow imported from the Model?
   var penguinViewModel = {
-    name : penguinModelData.name,
-    imageUrl : penguinModelData.imageUrl,
-    size : penguinModelData.size,
+    name         : penguinModelData.name,
+    imageUrl     : penguinModelData.imageUrl,
+    size         : penguinModelData.size,
     favoriteFood : penguinModelData.favoriteFood
   };
 
+  // next and previous penguins
   penguinViewModel.previousIndex = penguinModelData.index - 1;
   penguinViewModel.nextIndex = penguinModelData.index + 1;
-
-  // if first penguin
   if (penguinModelData.index === 0) {
     penguinViewModel.previousIndex = penguinModelData.count - 1;
   }
-
-  // if last penguin
   if (penguinModelData.index === penguinModelData.count - 1) {
     penguinViewModel.nextIndex = 0;
   }
 
   // render the damn penguin
+  // uses the View's contract - "render"
   this.penguinView.render(penguinViewModel);
 };
 

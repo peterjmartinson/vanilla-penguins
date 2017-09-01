@@ -5,6 +5,7 @@ var penguinViewMock = function penguinViewMock() {
   this.calledRenderWith = null;
 };
 
+// render is a "contract"
 penguinViewMock.prototype.render = function render(penguinViewModel) {
   this.calledRenderWith = penguinViewModel;
 };
