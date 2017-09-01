@@ -49,3 +49,4 @@ PenguinController.prototype.showPenguin = function showPenguin(penguinModelData)
   this.penguinView.render(penguinViewModel);
 };
 
+module.exports = PenguinController;
