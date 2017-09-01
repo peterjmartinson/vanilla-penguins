@@ -1,0 +1,31 @@
+{
+  "name": "penguins",
+  "version": "1.0.0",
+  "description": "Vanilla JS app to demonstrate MVC pattern",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterjmartinson/vanilla-penguins.git"
+  },
+  "keywords": [
+    "mvc",
+    "vanilla",
+    "es5",
+    "javascript"
+  ],
+  "author": "Peter Martinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterjmartinson/vanilla-penguins/issues"
+  },
+  "homepage": "https://github.com/peterjmartinson/vanilla-penguins#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
+}
