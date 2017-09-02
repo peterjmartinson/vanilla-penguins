@@ -13,12 +13,6 @@ ElementMock.prototype.focus = function focus() { };
 var elementMock = new ElementMock();
 
 var view = new PenguinView(elementMock);
-console.log("============== start output");
-console.log("Penguin View\n");
-console.log(view);
-console.log("Element Mock\n");
-console.log(elementMock);
-console.log("============== end output");
 
 var viewModel = {
   name: 'Chinstrap',
